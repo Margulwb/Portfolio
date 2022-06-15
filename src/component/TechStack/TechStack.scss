@@ -1,0 +1,36 @@
+@import "../variables";
+@import "../functions.scss";
+
+.technologies{
+    @include flexCenter();
+    flex-wrap: wrap;
+    gap:.5em;
+
+    &__li{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        transition: all .1s ease-in-out;
+        padding: 0 3em;
+    }
+
+    &__icon{
+        font-size: 2em;
+        @include flexCenter();
+        transition:  all .2s ease-in-out   ;
+        -webkit-transition:  all .2s ease-in-out   ;
+        -moz-transition:  all .2s ease-in-out   ;
+        -ms-transition:  all .2s ease-in-out   ;
+        -o-transition:  all .2s ease-in-out   ;
+}
+
+    &__name{
+        @include flexCenter();
+        padding-top: .4em;
+        font-size: 1.2em;
+        font-weight: bold;
+        font-family: $descriptionFont;
+        color: var(--text);
+        width: 3em;
+    }
+}
