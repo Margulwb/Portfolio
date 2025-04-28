@@ -1,7 +1,7 @@
 @import "../variables";
 @import "../functions.scss";
 
-:root{
+:root {
     --bgImageDark: url('./image/bgDark.jpg');
     --bgTextDark: rgba(49, 54, 59, .85);
 
@@ -9,12 +9,12 @@
     --bgTextLight: rgba(173, 181, 189, .85);
 }
 
-#root.light{
+#root.light {
     --bgImageAboutMe: var(--bgImageLight);
     --bgText: var(--bgTextLight);
 }
 
-#root.dark{
+#root.dark {
     --bgImageAboutMe: var(--bgImageDark);
     --bgText: var(--bgTextDark);
 }
@@ -29,129 +29,116 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    &__picture{
+    &__picture {
         @include flexCenter();
     }
 
-    &__img{
+    &__img {
         width: 10em;
         height: 12em;
-        border-radius:20px ;
-    }
-
-    &__text{
-       @include flexCenter();
-       color: var(--text);
+        border-radius: 20px;
     }
 
     &__headline,
-    &__information{
-       background-color: var(--bgText);
-       transition: all .2s linear;
-       -webkit-transition: all .2s linear;
-       -moz-transition: all .2s linear;
-       -ms-transition: all .2s linear;
-       -o-transition: all .2s linear;
-}
-    &__headline{
+    &__information {
+        background-color: var(--bgText);
+        transition: all .2s linear;
+        -webkit-transition: all .2s linear;
+        -moz-transition: all .2s linear;
+        -ms-transition: all .2s linear;
+        -o-transition: all .2s linear;
+    }
+
+    &__headline {
         font-family: $headlineFontBold;
         color: var(--headingColor);
     }
 
-    &__information{
+    &__information {
         font-family: $descriptionFont;
         color: var(--text);
-        text-align: center;
     }
 }
 
-@media (min-width: $tablet){
-    .about-me{
-        &__img{
+@media (min-width: $tablet) {
+    .about-me {
+        &__img {
             width: 15em;
             height: 20em;
         }
     }
 }
-@media (min-width: $bigtablet){
-    .about-me{
+
+@media (min-width: $bigtablet) {
+    .about-me {
         background-image: none;
 
-        &__text{
+        &__text {
             background-image: var(--bgImageAboutMe);
             background-repeat: no-repeat;
             background-size: cover;
-            height: 20em;
         }
 
-        &__border-image{
+        &__border-image {
             position: relative;
-            border:10px solid var(--headingColor);
+            border: 10px solid var(--headingColor);
         }
 
-        &__img{
+        &__img {
             padding: 2em;
         }
     }
 
 }
-@media (min-width:$laptop){
-    .about-me{
-        height: 32em;
 
-    &__img{
-        transition: all .2s ease-out;
-        -webkit-transition: all .2s ease-out;
-        -moz-transition: all .2s ease-out;
-        -ms-transition: all .2s ease-out;
-        -o-transition: all .2s ease-out;
-        filter: grayscale(1);
-        -webkit-filter: grayscale(1);
-        width: 270px;
-        height: 327px;
-        padding: 2em;
-    }
+@media (min-width:$laptop) {
+    .about-me {
+        height: 40em;
 
-    &__border-image{
-        transition: all .3s ease-in-out;
-        -webkit-transition: all .3s ease-in-out;
-        -moz-transition: all .3s ease-in-out;
-        -ms-transition: all .3s ease-in-out;
-        -o-transition: all .3s ease-in-out;
-        height: 365px;
-
-        &:hover{
-            padding: 0 3em;
-        }
-        &:hover .about-me__img{
-            transition-delay:.3s;
-            filter: grayscale(0);
+        &__img {
+            transition: all .2s ease-out;
+            -webkit-transition: all .2s ease-out;
+            -moz-transition: all .2s ease-out;
+            -ms-transition: all .2s ease-out;
+            -o-transition: all .2s ease-out;
+            filter: grayscale(1);
+            -webkit-filter: grayscale(1);
+            width: 270px;
+            height: 327px;
+            padding: 2em;
         }
 
-        &::before{
-            content: "";
-            display: block;
-            border: none;
-            height: 12px;
-            width: 60%;
-            background: var(--background);
-            position: absolute;
-            top: -11px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            box-shadow: 0 356px 0 var(--background);
-        }
-    }
-}
-}
+        &__border-image {
+            transition: all .3s ease-in-out;
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            -ms-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+            // height: 365px;
 
-@media (min-width:$desktop){
-    .about-me{
+            &:hover {
+                padding: 0 3em;
+            }
 
-        &__border-image:hover{
-            padding: 0 3.9em;
+            &:hover .about-me__img {
+                transition-delay: .3s;
+                filter: grayscale(0);
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                border: none;
+                height: 12px;
+                width: 60%;
+                background: var(--background);
+                position: absolute;
+                top: -11px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                box-shadow: 0 356px 0 var(--background);
+            }
         }
     }
-
 }

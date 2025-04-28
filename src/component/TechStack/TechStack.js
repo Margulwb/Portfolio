@@ -15,7 +15,7 @@ export function TechStack(props) {
 
     return  <div className='row my-5 pt-1' id='tech-stack'>
                 <div className="row mb-4">
-                    <h1 className="h1 ">{props.content.heading}</h1>
+                    <h1 className="h1">{props.content.heading}</h1>
                 </div>
                 <div className="row">
                     <InsertTechnology technologies={knownTechnologies}/>
