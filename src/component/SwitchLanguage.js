@@ -22,9 +22,11 @@ export function SwitchLanguage(language) {
             },
             techStack: {
                 heading: "Tech Stack",
+                SecoundHeading: ["Devops", "Frontend"],
             },
             myProject: {
                 heading: "My Projects",
+                SecoundHeading: ["Project Management", "Development"],
             },
             footer: {
                 heading: "Contact",
