@@ -5,7 +5,18 @@ export function SwitchLanguage(language) {
                 heading: "Hi, I'm Maciek",
                 aFewWordAboutMe: (
                     <>
-                        siema
+                        <p><strong>DevOps Engineer</strong> with over <strong>2.5 years of experience</strong> in:</p>
+                        <ul>
+                            <li>Designing and maintaining <strong>CI/CD processes</strong>.</li>
+                            <li>Managing infrastructure using <strong>IaC tools</strong> like Terraform and Ansible.</li>
+                            <li>Containerizing applications with <strong>Docker</strong>.</li>
+                        </ul>
+                        <p>I optimized CI processes in monorepositories, enabling efficient management and deployment across multiple projects.</p>
+                        <p>I migrated CI/CD processes from <strong>Jenkins</strong> to <strong>Azure DevOps</strong>, simplifying pipeline management and boosting team efficiency.</p>
+                        <p>Additionally, I established standards for IT projects in Azure DevOps, optimizing processes and accelerating feature delivery.</p>
+                        <p>All infrastructure and CI/CD configurations were automated using <strong>Terraform</strong>, ensuring easier environment management.</p>
+                        <p>Currently, I am expanding my skills in <strong>Kubernetes</strong> and <strong>GitOps</strong>.</p>
+                        <p>My focus is on <strong>automation</strong>, <strong>security</strong>, and effective collaboration with development teams to ensure stable and efficient environments.</p>
                     </>
                 ),
             },
