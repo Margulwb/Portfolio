@@ -22,13 +22,13 @@
 .h1{
   @include flexCenter();
   font-family: $headlineFontBold;
-  color:var(--headingColor);
+  color:var(--headingColor) !important;
   text-shadow: 6px 6px 0px rgba(0,0,0,0.1);
 }
 
-.h2 {
+h2 {
   font-family: $headlineFont;
   color: var(--headingColor);
   text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
-  margin-left: 10em;
+  margin-left: 2em;
 }

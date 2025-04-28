@@ -29,7 +29,7 @@ export function TechStack(props) {
             </div>
             {props.content.SecoundHeading.map((category, index) => (
                 <div className="row" key={index}>
-                    <h2 className="h2">{props.content.SecoundHeading[index]}</h2>
+                    <h2 className="profesion">{props.content.SecoundHeading[index]}</h2>
                     <InsertTechnology technologies={category === 'Frontend' ? Frontend : Devops} />
                 </div>
             ))}
