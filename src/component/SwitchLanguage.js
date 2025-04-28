@@ -1,58 +1,70 @@
 export function SwitchLanguage(language) {
     const ContentPage = {
-        en:{
-            aboutMe:{
-                heading:"Hi, I'm Maciek",
-                aFewWordAboutMe:
-                <>
-                    DevOps Engineer with over 2.5 years of experience in designing and maintaining CI/CD processes, managing infrastructure using IaC
-                    tools (Terraform, Ansible), and containerizing applications with Docker. I optimized CI processes in monorepositories, allowing for more
-                    efficient management and deployment of applications across multiple projects. I migrated CI/CD processes from Jenkins to Azure DevOps,
-                    simplifying pipeline management and increasing the efficiency of development teams. Additionally, I created standards for IT projects in
-                    Azure DevOps, which enabled process optimization and accelerated the introduction of new functionalities into the system. The entire
-                    infrastructure and CI/CD configuration was written in Terraform, ensuring full automation and easier environment management. Currently, I
-                    am expanding my skills in Kubernetes and GitOps. I focus on automation, security, and effective collaboration with development teams to
-                    ensure stable and efficient environments.
-                </>,
+        en: {
+            aboutMe: {
+                heading: "Hi, I'm Maciek",
+                aFewWordAboutMe: (
+                    <>
+                        <p><strong>DevOps Engineer</strong> with over <strong>2.5 years of experience</strong> in:</p>
+                        <ul>
+                            <li>Designing and maintaining <strong>CI/CD processes</strong>.</li>
+                            <li>Managing infrastructure using <strong>IaC tools</strong> like Terraform and Ansible.</li>
+                            <li>Containerizing applications with <strong>Docker</strong>.</li>
+                        </ul>
+                        <p>I optimized CI processes in monorepositories, enabling efficient management and deployment across multiple projects.</p>
+                        <p>I migrated CI/CD processes from <strong>Jenkins</strong> to <strong>Azure DevOps</strong>, simplifying pipeline management and boosting team efficiency.</p>
+                        <p>Additionally, I established standards for IT projects in Azure DevOps, optimizing processes and accelerating feature delivery.</p>
+                        <p>All infrastructure and CI/CD configurations were automated using <strong>Terraform</strong>, ensuring easier environment management.</p>
+                        <p>Currently, I am expanding my skills in <strong>Kubernetes</strong> and <strong>GitOps</strong>.</p>
+                        <p>My focus is on <strong>automation</strong>, <strong>security</strong>, and effective collaboration with development teams to ensure stable and efficient environments.</p>
+                    </>
+                ),
             },
-            techStack:{
-                heading:"Tech Stack",
+            techStack: {
+                heading: "Tech Stack",
+                SecoundHeading: ["Devops", "Frontend"],
             },
-            myProject:{
-                heading:"My Projects",
+            myProject: {
+                heading: "My Projects",
+                SecoundHeading: ["Project Management", "Development"],
             },
-            footer:{
-                heading:"Contact",
-            }
+            footer: {
+                heading: "Contact",
+            },
         },
-        pl:{
-            aboutMe:{
-                heading:"Cześć, tutaj Maciek",
-                aFewWordAboutMe:
-                <>
-                    DevOps Engineer z ponad 2,5-letnim doświadczeniem w projektowaniu i utrzymywaniu procesów CI/CD, zarządzaniu infrastrukturą za
-                    pomocą narzędzi IaC (Terraform, Ansible) oraz konteneryzacją aplikacji w Docker. Zoptymalizowałem procesy CI w monorepozytoriach, co
-                    pozwoliło na bardziej efektywne zarządzanie i wdrażanie aplikacji w wielu projektach. Dokonałem migracji procesów CI/CD z Jenkins na
-                    Azure DevOps, co pozwoliło na uproszczenie zarządzania pipeline'ami oraz zwiększenie wydajności zespołów deweloperskich.
-                    Dodatkowo stworzyłem standardy projektów informatycznych w Azure DevOps, co umożliwiło optymalizację procesów oraz przyspieszenie
-                    wprowadzania nowych funkcjonalności do systemu. Cała konfiguracja infrastruktury oraz procesów CI/CD została napisana w Terraformie,
-                    co zapewniło pełną automatyzację i łatwiejsze zarządzanie środowiskami. Obecnie rozwijam kompetencje w zakresie Kubernetes oraz
-                    GitOps. Skupiam się na automatyzacji, bezpieczeństwie oraz efektywnej współpracy z zespołami deweloperskimi w celu zapewnienia
-                    stabilnych i wydajnych środowisk
-                </>,
+        pl: {
+            aboutMe: {
+                heading: "Cześć, tutaj Maciek",
+                aFewWordAboutMe: (
+                    <>
+                        <p><strong>DevOps Engineer</strong> z ponad <strong>2,5-letnim doświadczeniem</strong> w:</p>
+                        <ul>
+                            <li>Projektowaniu i rozwijaniu <strong>procesów CI/CD</strong>.</li>
+                            <li>Zarządzaniu infrastrukturą za pomocą <strong>narzędzi IaC</strong>, takich jak Terraform i Ansible.</li>
+                            <li>Konteneryzacji aplikacji w <strong>Docker</strong>.</li>
+                        </ul>
+                        <p>Zoptymalizowałem procesy CI w monorepozytoriach, co umożliwiło efektywne zarządzanie i wdrażanie aplikacji w wielu projektach.</p>
+                        <p>Przeprowadziłem migrację procesów CI/CD z <strong>Jenkins</strong> na <strong>Azure DevOps</strong>, upraszczając zarządzanie pipeline'ami i zwiększając wydajność zespołów.</p>
+                        <p>Dodatkowo stworzyłem standardy projektów IT w Azure DevOps, co zoptymalizowało procesy i przyspieszyło wprowadzanie nowych funkcjonalności.</p>
+                        <p>Cała infrastruktura i konfiguracja CI/CD zostały zautomatyzowane za pomocą <strong>Terraform</strong>, co ułatwiło zarządzanie środowiskami.</p>
+                        <p>Obecnie rozwijam kompetencje w zakresie <strong>Kubernetes</strong> i <strong>GitOps</strong>.</p>
+                        <p>Skupiam się na <strong>automatyzacji</strong>, <strong>bezpieczeństwie</strong> oraz efektywnej współpracy z zespołami deweloperskimi, aby zapewnić stabilne i wydajne środowiska.</p>
+                    </>
+                ),
             },
-            techStack:{
-                heading:"Poznane Technologie",
+            techStack: {
+                heading: "Poznane Technologie",
             },
-            myProject:{
-                heading:"Moje Projekty",
+            myProject: {
+                heading: "Moje Projekty",
             },
-            footer:{
-                heading:"Kontakt",
-            }
+            footer: {
+                heading: "Kontakt",
+            },
         },
-    }
+    };
 
-    if(language==='EN') return ContentPage.en
-    if(language==='PL') return ContentPage.pl
+    if (language === 'EN') return ContentPage.en;
+    if (language === 'PL') return ContentPage.pl;
+    return null
 }
